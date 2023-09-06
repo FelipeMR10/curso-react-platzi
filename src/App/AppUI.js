@@ -8,6 +8,7 @@ import { TodoError } from '../TodoError'
 import { EmpyTodos } from '../EmpyTodos'
 import { CreateTodoButton } from '../CreateTodoButton'
 import { Modal } from '../Modal'
+import { TodoForm } from '../TodoForm'
 import { TodoContext } from '../TodoContext'
 
 function AppUI(/*aqui habian props*/) {
@@ -42,11 +43,12 @@ function AppUI(/*aqui habian props*/) {
                 ))}
             </TodoList>
 
-            <CreateTodoButton />
+            <CreateTodoButton 
+            setOpenModal={setOpenModal}/>
             
             {openModal && (
                 <Modal>
-                    Add Tarea............
+                    <TodoForm />
                 </Modal>
             )}
 
