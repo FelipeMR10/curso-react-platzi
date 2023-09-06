@@ -5,6 +5,7 @@ export function CreateTodoButton() {
         <button className="CreateTodoButton" 
         onClick={
             (event)=> {
+                
                 console.log('Nueva tarea')
                 console.log(event)
                 console.log(event.target)
